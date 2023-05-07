@@ -1,9 +1,11 @@
-FROM python:3.11.2-slim-buster
+
+FROM python:3.10-slim-bullseye
 
 WORKDIR /app
 
 COPY app.py .
 COPY requirements.txt .
+COPY model.pkl .
 
 RUN pip install -r requirements.txt
 
